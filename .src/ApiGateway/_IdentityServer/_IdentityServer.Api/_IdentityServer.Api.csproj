@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Shared.Core\Shared.Backend.Core.csproj" />
+    <ProjectReference Include="..\_IdentityServer.Business\_IdentityServer.Business.csproj" />
+    <ProjectReference Include="..\_IdentityServer.Dal\_IdentityServer.Dal.csproj" />
+    <ProjectReference Include="..\_IdentityServer.Entities\_IdentityServer.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
