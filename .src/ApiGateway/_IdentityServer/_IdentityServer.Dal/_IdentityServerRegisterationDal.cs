@@ -1,4 +1,5 @@
 ﻿using _IdentityServer.Dal.Abstract.Factories;
+using _IdentityServer.Dal.Concrete.Factories.Dapper;
 using _IdentityServer.Dal.Concrete.Factories.EntitiyFramework;
 using _IdentityServer.Dal.Concrete.Factories.MongoDb;
 using Autofac;

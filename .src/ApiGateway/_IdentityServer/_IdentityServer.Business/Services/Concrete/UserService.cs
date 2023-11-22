@@ -85,6 +85,13 @@ namespace _IdentityServer.Business.Services.Concrete
 
 
 
+
+
+
+
+
+
+
         [CacheAspect(CacheType.Redis, Priority = 2)]
         [SecuredOperationAspect("User.GetById", Priority = 1)]
         public async Task<User> GetById(int Id)

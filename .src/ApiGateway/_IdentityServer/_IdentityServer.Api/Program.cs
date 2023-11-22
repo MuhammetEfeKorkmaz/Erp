@@ -16,7 +16,12 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.ServiceRegisterationSharedBackEndCoreInit(new TokenOptionsModel());
+
+//Connection string , Secilen ORM , Seçilen DB burada belirtilir.
+//builder.Services.IdentityServerRegisterationDalInit("con", "Dapper", "PostgreSql");
 builder.Services.IdentityServerRegisterationDalInit("con", "EF", "MsSql");
+
+
 builder.Services.IdentityServerRegisterationBusinessInit();
 
 

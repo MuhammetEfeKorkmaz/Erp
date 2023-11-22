@@ -3,6 +3,14 @@ using System.Linq.Expressions;
 
 namespace Shared.Backend.Core.DataAccess
 {
+
+
+
+    /// <summary>
+    /// burada dapper işlemleri yapılacak. Sadece örnek olarak eklendi. DbContext yerine DbSet<TEntity> çağırılacak.
+    /// </summary>
+    /// <typeparam name="TEntity"></typeparam>
+    /// <typeparam name="TContext"></typeparam>
     public class RepositoryBase_Dapper<TEntity, TContext> : IRepositoryBase<TEntity>
 where TEntity : class, new()
 where TContext : DbContext, new()

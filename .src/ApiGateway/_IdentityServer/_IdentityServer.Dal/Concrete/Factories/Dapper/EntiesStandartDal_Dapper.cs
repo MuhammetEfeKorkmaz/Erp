@@ -1,10 +1,11 @@
 ﻿using _IdentityServer.Dal.Abstract.Factories;
 using _IdentityServer.Dal.Abstract.Factories.Dapper;
+using _IdentityServer.Dal.Concrete.Factories.MongoDb;
 using _IdentityServer.Entities.DbModels;
 using Microsoft.Extensions.DependencyInjection;
 using Shared.Backend.Core.DataAccess;
 
-namespace _IdentityServer.Dal.Concrete.Factories.MongoDb
+namespace _IdentityServer.Dal.Concrete.Factories.Dapper
 {
     internal class EntiesStandartDal_Dapper
     {

@@ -4,14 +4,13 @@ using Castle.DynamicProxy;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Shared.Backend.Core.Aspects;
+using ServiceStack.Redis;
 using Shared.Backend.Core.Aspects.Base;
-using Shared.Backend.Core.Aspects.Caching.Factories;
 using Shared.Backend.Core.Aspects.Caching;
+using Shared.Backend.Core.Aspects.Caching.Factories;
 using Shared.Backend.Core.Aspects.Secured.Jwt;
 using Shared.Backend.Core.Aspects.Secured.Jwt.Models;
 using Module = Autofac.Module;
-using ServiceStack.Redis;
 
 namespace Shared.Backend.Core
 {
@@ -33,6 +32,7 @@ namespace Shared.Backend.Core
 
         public static IServiceProvider ServiceRegisterationSharedBackEndCoreInit(this IServiceCollection services, TokenOptionsModel  _tokenOptionsModel)
         {
+            // core tarafında yapılacak iyileştirme sonrası, buraya EmailSender,SmsSender  modülleri eklenecek.
             services.AddMemoryCache();
             services.AddSingleton<ICacheManager, Cache_MM>();
             services.AddSingleton<IRedisClient, RedisClient>(); 
